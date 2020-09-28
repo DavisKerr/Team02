@@ -89,11 +89,12 @@
       
       $countryCode = array("NA"=>"North America", "SA"=>"South America", "EU"=>"Europe", "A"=>"Asia", "HJ"=>"Australia", 
                            "AFR"=>"Africa", "AN"=>"Antarctica");
-      foreach($countryCode as $country)
+      
+      foreach($countryCode as $key=>$value)
       {
-        if(isset($_POST[$country[0]]))
+        if(isset($_POST[$key]))
         {
-          echo $country[1] . "<br>";
+          echo $value . "<br>";
         }
       }
 
