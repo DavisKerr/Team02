@@ -16,6 +16,20 @@
       <label for="email">Email:</label>
       <input type="text" value="" id="email" name="email">
       <br>
+
+      <?php 
+        $options = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering");
+
+        echo "<label for=\"major\"> Major </label><br>";
+
+        foreach ($options as $item)
+        {
+          echo "<input type=\"radio\" value=\"" . $item . "\" name=\"major\" id=\"" . $item ."\">"
+          echo "<label for=\"". $item . "\">" . $item . "</label><br>";
+        }
+      ?>
+
+      <!--
       <label for="major">Major</label><br>
       <input type="radio" value="Computer Science" id="CS" name="major">
       <label for="CS">Computer Science</label>
@@ -28,7 +42,7 @@
       <br>
       <input type="radio" value="Computer Engineering" id="CE" name="major">
       <label for="CE">Computer Engineering</label>
-      <br>
+      <br> -->
       <br>
       <label for="comments">Comments:</label><br>
       <textarea name="comments" value="" id="comments"></textarea>
@@ -71,7 +85,7 @@
 
       $comments = $_POST["comments"];
       echo "Your name is " . $name . "<br> Your email is " . "<a href=\"mailto:" . $email . "\"> " . $email . "</a>" ."<br>";
-      echo "Your Major is " . $major . "<br>" . "Your comments:<br>" . $comments . "<br> You have visited ";
+      echo "Your Major is " . $major . "<br>" . "Your comments:<br>" . $comments . "<br> You have visited<br>";
 
       if (isset($_POST["NA"]))
       {
