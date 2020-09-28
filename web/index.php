@@ -24,7 +24,7 @@
 
         foreach ($options as $item)
         {
-          echo "<input type=\"radio\" value=\"" . $item . "\" name=\"major\" id=\"" . $item ."\">"
+          echo "<input type=\"radio\" value=\"" . $item . "\" name=\"major\" id=\"" . $item ."\">";
           echo "<label for=\"". $item . "\">" . $item . "</label><br>";
         }
       ?>
