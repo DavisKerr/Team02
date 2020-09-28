@@ -48,31 +48,31 @@
       <textarea name="comments" value="" id="comments"></textarea>
       <br>
       <label for="visited">What continents have you visited?</label><br>
-      <input type="checkbox" value="North America" name="NA" id="NA"> 
+      <input type="checkbox" value="NA" name="NA" id="NA"> 
       <label for="NA">North America</label>
       <br>
 
-      <input type="checkbox" value="South America" name="SA" id="SA"> 
+      <input type="checkbox" value="SA" name="SA" id="SA"> 
       <label for="SA">South America</label>
       <br>
 
-      <input type="checkbox" value="Europe" name="EU" id="EU"> 
+      <input type="checkbox" value="EU" name="EU" id="EU"> 
       <label for="EU">Europe</label>
       <br>
 
-      <input type="checkbox" value="Asia" name="A" id="A"> 
+      <input type="checkbox" value="A" name="A" id="A"> 
       <label for="A">Asia</label>
       <br>
 
-      <input type="checkbox" value="Australia" name="HJ" id="HJ"> 
+      <input type="checkbox" value="HJ" name="HJ" id="HJ"> 
       <label for="HJ">Australia</label>
       <br>
 
-      <input type="checkbox" value="Africa" name="AFR" id="AFR"> 
+      <input type="checkbox" value="AFR" name="AFR" id="AFR"> 
       <label for="AFR">Africa</label>
       <br>
 
-      <input type="checkbox" value="Antarctica" name="AN" id="AN"> 
+      <input type="checkbox" value="AN" name="AN" id="AN"> 
       <label for="AN">Antarctica</label>
       <br>
 
@@ -86,8 +86,18 @@
       $comments = $_POST["comments"];
       echo "Your name is " . $name . "<br> Your email is " . "<a href=\"mailto:" . $email . "\"> " . $email . "</a>" ."<br>";
       echo "Your Major is " . $major . "<br>" . "Your comments:<br>" . $comments . "<br> You have visited<br>";
+      
+      $countryCode = array("NA"=>"North America", "SA"=>"South America", "EU"=>"Europe", "A"=>"Asia", "HJ"=>"Australia", 
+                           "AFR"=>"Africa", "AN"=>"Antarctica");
+      foreach($countryCode as $country)
+      {
+        if(isset($_POST[$country[0]]))
+        {
+          echo $country[1] . "<br>";
+        }
+      }
 
-      if (isset($_POST["NA"]))
+      /*if (isset($_POST["NA"]))
       {
         echo $_POST["NA"] . "<br>";
       }
@@ -120,7 +130,7 @@
       if (isset($_POST["AN"]))
       {
         echo $_POST["AN"] . "<br>";
-      }
+      }*/
       
     ?>
   </body>
