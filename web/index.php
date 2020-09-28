@@ -75,37 +75,37 @@
 
       if (isset($_POST["NA"]))
       {
-        echo $_POST["NA"] . " ";
+        echo $_POST["NA"] . "<br>";
       }
 
       if (isset($_POST["SA"]))
       {
-        echo $_POST["SA"] . " ";
+        echo $_POST["SA"] . "<br>";
       }
 
       if (isset($_POST["EU"]))
       {
-        echo $_POST["EU"] . " ";
+        echo $_POST["EU"] . "<br>";
       }
 
       if (isset($_POST["A"]))
       {
-        echo $_POST["A"] . " ";
+        echo $_POST["A"] . "<br>";
       }
 
       if (isset($_POST["HJ"]))
       {
-        echo $_POST["HJ"] . " ";
+        echo $_POST["HJ"] . "<br>";
       }
 
       if (isset($_POST["AFR"]))
       {
-        echo $_POST["AFR"] . " ";
+        echo $_POST["AFR"] . "<br>";
       }
 
       if (isset($_POST["AN"]))
       {
-        echo $_POST["AN"] . " ";
+        echo $_POST["AN"] . "<br>";
       }
       
     ?>
