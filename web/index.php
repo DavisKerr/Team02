@@ -32,6 +32,8 @@
       <br>
       <label for="comments">Comments:</label><br>
       <textarea name="comments" value="" id="comments"></textarea>
+      <br>
+      <input type="submit" value="Submit">
     </form>
     <?php 
       $name = $_POST["name"];
