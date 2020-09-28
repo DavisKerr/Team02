@@ -33,15 +33,81 @@
       <label for="comments">Comments:</label><br>
       <textarea name="comments" value="" id="comments"></textarea>
       <br>
+      <label for="visited">What continents have you visited?</label><br>
+      <input type="checkbox" value="North America" name="NA" id="NA"> 
+      <label for="NA">North America</label>
+      <br>
+
+      <input type="checkbox" value="South America" name="SA" id="SA"> 
+      <label for="SA">South America</label>
+      <br>
+
+      <input type="checkbox" value="Europe" name="EU" id="EU"> 
+      <label for="EU">Europe</label>
+      <br>
+
+      <input type="checkbox" value="Asia" name="A" id="A"> 
+      <label for="A">Asia</label>
+      <br>
+
+      <input type="checkbox" value="Australia" name="HJ" id="HJ"> 
+      <label for="HJ">Australia</label>
+      <br>
+
+      <input type="checkbox" value="Africa" name="AFR" id="AFR"> 
+      <label for="AFR">Africa</label>
+      <br>
+
+      <input type="checkbox" value="Antarctica" name="AN" id="AN"> 
+      <label for="AN">Antarctica</label>
+      <br>
+
       <input type="submit" value="Submit">
     </form>
     <?php 
       $name = $_POST["name"];
       $email = $_POST["email"];
       $major = $_POST["major"];
+
       $comments = $_POST["comments"];
       echo "Your name is " . $name . "<br> Your email is " . "<a href=\"mailto:" . $email . "\"> " . $email . "</a>" ."<br>";
-      echo "Your Major is " . $major . "<br>" . "Your comments:<br>" . $comments;
+      echo "Your Major is " . $major . "<br>" . "Your comments:<br>" . $comments . "<br> You have visited ";
+
+      if (isset($_POST["NA"]))
+      {
+        echo $_POST["NA"] . " ";
+      }
+
+      if (isset($_POST["SA"]))
+      {
+        echo $_POST["SA"] . " ";
+      }
+
+      if (isset($_POST["EU"]))
+      {
+        echo $_POST["EU"] . " ";
+      }
+
+      if (isset($_POST["A"]))
+      {
+        echo $_POST["A"] . " ";
+      }
+
+      if (isset($_POST["HJ"]))
+      {
+        echo $_POST["HJ"] . " ";
+      }
+
+      if (isset($_POST["AFR"]))
+      {
+        echo $_POST["AFR"] . " ";
+      }
+
+      if (isset($_POST["AN"]))
+      {
+        echo $_POST["AN"] . " ";
+      }
+      
     ?>
   </body>
 </html>
